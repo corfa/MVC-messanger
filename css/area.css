@@ -1,0 +1,21 @@
+.container {
+    display: flex; /* Используем flex-контейнер */
+    justify-content: center; /* Выравниваем элементы по центру горизонтали */
+    align-items: center; /* Выравниваем элементы по центру вертикали */
+    height: 30vh; /* Задаем высоту контейнера, чтобы элементы были посередине экрана */
+  }
+  
+  .box1, .box2 {
+    width: 500px; /* Задаем ширину блоков */
+    height: 500px; /* Задаем высоту блоков */
+    border: solid;
+    overflow-y: scroll;
+    margin: 10px; /* Отступы между блоками */
+  }
+  .caption1, .caption2 {
+    text-align: center; /* Выравниваем текст по центру */
+    margin-top: 10px; /* Отступ сверху */
+  }
+  
+  
+  

@@ -8,6 +8,11 @@ class Controller_User extends Controller
 		$this->view = new View();
 	}
 	
+	function action_exit(){
+		setcookie("id", -1,time()-60*60*24, "/");
+		$this->view->generate('user_auth.php', 'template_view.php');
+	}
+
 	function action_create(){
 			$db_ans=$this->model->create_user($_POST["login"],$_POST["password"]);
 			if ($db_ans){
@@ -27,6 +32,7 @@ class Controller_User extends Controller
 		$this->view->generate('error/403_view.php', 'template_view.php');
 		}
 }
+
 
 	function action_index()
 	{
