@@ -5,6 +5,9 @@
  foreach ($data as $row) {
     echo "------------------";
     echo "<h3>". $row["username"] ."</h3>";
+    echo "<a href='/areaAdmin/delUser/?id_user=".$row["id"] . "'>удалить пользователя</a>";
+    echo "<br>";
+    echo "<a href='/areaAdmin/showUserMessage/?id_user=".$row["id"] . "'>показать сообщения пользователя</a>";
     echo "<br>";
    
 }
