@@ -24,7 +24,6 @@ class Model_Area extends Model
         $messages=[];
         $recipients=[];
         foreach ($stmt as $row) {
-            //$recipient[] = $this->get_name_by_id($conn_db,$row["id_sender"]);
             array_push($titles,$row["title_message"]);
             array_push($messages,$row["text_message"]);
             array_push($recipients, $this->get_name_by_id($conn_db,$row["id_recipient"]));
@@ -44,7 +43,6 @@ class Model_Area extends Model
         $messages=[];
         $senders=[];
         foreach ($stmt as $row) {
-            //$recipient[] = $this->get_name_by_id($conn_db,$row["id_sender"]);
             array_push($titles,$row["title_message"]);
             array_push($messages,$row["text_message"]);
             array_push($senders, $this->get_name_by_id($conn_db,$row["id_sender"]));
