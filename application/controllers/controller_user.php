@@ -26,7 +26,7 @@ class Controller_User extends Controller
 		$db_ans=$this->model->check_user($_POST["login"],$_POST["password"]);
 		if ($db_ans!=-1){
 			setcookie("id", $db_ans,time()+60*60*24, "/");
-			header("Location: http://MVC/area");
+			header("Location: http://mvc-messanger/area");
 			
 		}else{
 		$this->view->generate('error/403_view.php', 'template_view.php');

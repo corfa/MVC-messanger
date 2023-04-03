@@ -12,7 +12,7 @@ class Controller_Area extends Controller
 		if ($_COOKIE["id"]){
             $db_ans=$this->model->send_message($_COOKIE["id"],$_POST["title"],$_POST["text_message"],$_POST["recipient"]);
 			if ($db_ans){
-				header("Location: http://MVC/area");
+				header("Location: http://mvc-messanger/area");
 
 			}
 			else{

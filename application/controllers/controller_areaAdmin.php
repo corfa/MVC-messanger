@@ -18,6 +18,7 @@ class Controller_AreaAdmin extends Controller
 			$this->view->generate('admin_auth.php', 'template_view.php');
 			}
 	}
+	
 
 	function action_showUserMessage(){
 		if ($_COOKIE["admin"]){

@@ -18,7 +18,7 @@ function action_auth(){
 	$db_ans=$this->model->check_admin($_POST["login"],$_POST["password"]);
 	if ($db_ans!=-1){
 		setcookie("admin","admin",time()+60*60*24, "/");
-		header("Location: http://MVC/areaAdmin");
+		header("Location: http://mvc-messanger/areaAdmin");
 		
 	}else{
 	$this->view->generate('error/403_view.php', 'template_view.php');

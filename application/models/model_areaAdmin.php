@@ -23,7 +23,12 @@ class Model_AreaAdmin extends Model
 
     public function del_user($id_user){
         $conn_db=$this->get_connect_db();
+        $sql = "DELETE FROM email_messages WHERE id_sender = :id_user OR id_recipient = :id_user";
+        $stmt = $conn_db->prepare($sql);
+        $stmt->bindValue(":id_user", $id_user);
+        $stmt->execute();
         $sql = "DELETE FROM users WHERE id = :id_user";
+       
         $stmt = $conn_db->prepare($sql);
         $stmt->bindValue(":id_user", $id_user);
         $stmt->execute();
