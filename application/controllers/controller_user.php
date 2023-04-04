@@ -29,7 +29,7 @@ class Controller_User extends Controller
 			header("Location: http://mvc-messanger/area");
 			
 		}else{
-		$this->view->generate('error/403_view.php', 'template_view.php');
+		$this->view->generate('403_view.php', 'template_view.php');
 		}
 }
 
